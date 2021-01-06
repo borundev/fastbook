@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+
+  fastai:
+    build: .
+    image: fastbook
+    container_name: fastbook
+    init: true
+    command: "--NotebookApp.base_url='fastbook'"
+    ipc: host
+    labels:
+      - log.level=debug
+      - traefik.enable=true
+      - traefik.frontend.rule=Host:${HOSTNAME};PathPrefix:/fastbook/
+      - traefik.frontend.auth.basic=${ML_HTTP_USER}:${ML_HTTP_AUTH_PASS_ENC}
+    networks:
+      - traefik_default
+
+networks:
+  traefik_default:
+    external:
+      name: traefik
