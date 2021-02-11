@@ -11,4 +11,4 @@ else
 fi
 
 export HTTP_USER=user
-export HTTP_AUTH_PASS_ENC="\$apr1\$0rh0Tkr3\$ALeFxLzN7Q7m7fvaBFB8H0"
+export HTTP_AUTH_PASS_ENC="\$apr1\$WL.wWOuv\$QUP8kELC3aum94A/JCzKg."

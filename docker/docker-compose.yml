@@ -4,7 +4,7 @@ services:
 
   fastai:
     build: .
-    image: fastbook
+    image: borundev/fastbook
     container_name: fastbook
     init: true
     command: "--NotebookApp.base_url='fastbook'"
@@ -13,7 +13,7 @@ services:
       - log.level=debug
       - traefik.enable=true
       - traefik.frontend.rule=Host:${HOSTNAME};PathPrefix:/fastbook/
-      - traefik.frontend.auth.basic=${ML_HTTP_USER}:${ML_HTTP_AUTH_PASS_ENC}
+      - traefik.frontend.auth.basic=${HTTP_USER}:${HTTP_AUTH_PASS_ENC}
     networks:
       - traefik_default
 
