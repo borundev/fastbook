@@ -9,6 +9,3 @@ then
 else 
 	echo "HOSTNAME = '$HOSTNAME'"
 fi
-
-export HTTP_USER= USERNAME
-export HTTP_AUTH_PASS_ENC=ENCRYPTED_PASSWORD
