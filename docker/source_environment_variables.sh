@@ -10,5 +10,5 @@ else
 	echo "HOSTNAME = '$HOSTNAME'"
 fi
 
-export HTTP_USER=user
-export HTTP_AUTH_PASS_ENC="\$apr1\$WL.wWOuv\$QUP8kELC3aum94A/JCzKg."
+export HTTP_USER= USERNAME
+export HTTP_AUTH_PASS_ENC=ENCRYPTED_PASSWORD
